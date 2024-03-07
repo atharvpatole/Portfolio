@@ -37,26 +37,6 @@ nav li {
   margin: 0 10px;
 }
 
-@media only screen and (max-width: 768px) {
-  body {
-    font-size: 14px; /* Adjust font size for smaller screens */
-  }
-  .project-container {
-    flex-wrap: wrap; /* Wrap projects on smaller screens */
-  }
-  .project img {
-    width: 100%; /* Make images responsive */
-  }
-  nav {
-    flex-direction: column; /* Stack items vertically on mobile */
-  }
-
-  nav li {
-    display: block; /* Change to block from inline-block */
-    margin: 10px 0; /* Adjust margins for vertical stacking */
-  }
-}
-
 nav a {
   text-decoration: none;
   color: black;
