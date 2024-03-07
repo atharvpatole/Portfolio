@@ -1,0 +1,185 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #f1f1f1;
+  padding: 150px;
+  text-align: center;
+}
+
+h1 {
+  font-weight: bold; 
+  margin: 0;
+}
+
+nav {
+  background-color: #ddd;
+  padding: 15px 10px;
+  position: fixed; /* Fixes the navigation bar on top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10; /* Ensures navigation bar stays on top of content */
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  text-align: right;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-weight:500;
+}
+
+nav span {  
+    display: inline-block;  
+    margin-right: 10px;  
+    padding: 10px;
+    position: fixed; /* Fixes the navigation bar on top */
+    top: 10px;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+nav a:hover {
+  color: #db0000;
+}
+
+main {
+  padding: 30px;
+  margin-top: 0px; 
+}
+
+section {
+  margin-bottom: 100px;
+  padding-top: 70px;
+}
+
+.social-media-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+  }
+  
+  .social-media-list li {
+    margin-right: 10px; 
+  }
+  
+  .social-media-list a {
+    text-decoration: none;
+  }
+  
+  .social-media-list img {
+    width: 30px; 
+    height: 30px; 
+  }
+
+  .project-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px; /* Adjust the gap between projects */
+    flex-wrap: wrap;
+}
+
+.project {
+    flex: 1;
+    margin: 10px;
+    border: 0px solid #1c1515;
+    text-align: left;  
+}
+
+.project img {
+    width: 100%; 
+    height: 40%;
+    border-radius: 15px;
+    align-items: center; 
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills-list li {
+  display: inline-block;
+  width: 25%; /* Makes each skill take 25% width */
+  text-align: left;
+  padding: 5px;
+  border-bottom: 1px solid #ddd; 
+}
+
+.progress-container {
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.progress-bar {
+    height: 20px;
+    background: rgb(255,0,0);
+    background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(252,176,69,1) 50%, rgba(0,255,29,1) 100%);
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.progress-label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.skills-list li:last-child {
+  border-bottom: none; 
+}
+
+.form-container {
+    max-width: 400px;
+    margin: auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="submit"] {
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}

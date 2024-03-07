@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atharv Patole Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Hello, my name is Atharv.</h1>
+    <p>I am a Software Developer / Engineer based in New York, NY. <br>Building apps and online experiences.</p>
+    <ul class="social-media-list">
+      <li>
+        <a href="https://www.linkedin.com/in/atharvpatole">
+          <img src="Linkedin.png" alt="LinkedIn Logo">
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/atharvpatole">
+          <img src="https://github.com/favicon.ico" alt="GitHub Logo">
+        </a>
+        <a href="https://twitter.com/atharvpatole">
+          <img src="X.png" alt="X Logo">
+        </a>
+      </li>
+      </ul>
+  </header>
+
+  
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <h3>So why work with me?</h3>
+      <p>
+        <br>With a background in computer science, my superpower is problem solving. I'm excellent at breaking down weird and wonderful ideas and figuring out how to get them built.
+      </p>
+      <p>
+        I'm a recent computer science graduate with a passion for problem-solving. I've hit the ground running by completing a couple of projects, and I'm eager to leverage my skills and knowledge in a professional environment where I can learn and continuously grow.
+      </p>
+      <p>
+        Finally, I'm a great communicator and collaborator and understand that you don't always care about "how" it gets done, just that it gets done well and on time.
+      </p>
+      
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project-container">
+          <div class="project">
+              <h3>Device Motion Detection</h3>
+              <img src="DeviceMotion.png" alt="Device Motion Detection">
+              <p>
+                <br>Interactive Experience: Combines motion control with speech feedback, creating a dynamic and engaging user experience.
+                <br>
+                <br>Web Development Fundamentals: Emphasize your understanding of HTML, CSS, and JavaScript for building the web page and handling user interaction.
+                <br>
+                <br>Device motion detection with speech feedback using the DeviceMotionEvent and SpeechSynthesis APIs.
+                <br>
+                <br>Creates a dynamic and engaging user experience.  
+            </p>
+          </div>
+
+          <div class="project">
+              <h3>Number Guessing Game</h3>
+              <img src="NumberGuessGame.png" alt="Number Guessing Game">
+              <p>
+                <br>Challenge yourself with this classic number guessing game!
+                <br>
+                <br>Get hints: After each guess, the program will tell you if your guess is too high, too low, or correct.
+                <br>
+                <br>Basic programming concepts: Variables, conditional statements, loops, user input/output.
+                <br>
+                <br>User interaction: Prompting the user for input and displaying messages based on their guesses.
+            </p> 
+          </div>
+
+          <div class="project">
+              <h3>Web Browser</h3>
+              <img src="WebBrowser.png" alt="Web Browser">
+              <p>
+                <br>User-friendly interface with navigation elements like address bar, search bar, and back/forward buttons.
+                <br>
+                <br>Basic web browsing functionalities: Navigating to different websites and accessing web content.
+                <br>
+                <br>Programming concepts: Applying concepts like variables, data structures, control flow, and object-oriented programming (OOP) principles.
+                <br>
+                <br>Event handling: Responding to user interactions like clicking buttons or entering URLs.  
+            </p>
+          </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills-container">
+        <div class="skills-section">
+          <h3>Technical Skills</h3>
+          <div class="progress-container">
+            <div class="progress-label">HTML/CSS</div>
+            <div class="progress-bar" style="width: 80%;"></div>
+            <div class="progress-label">JavaScript</div>
+            <div class="progress-bar" style="width: 70%;"></div>
+            <div class="progress-label">Java</div>
+            <div class="progress-bar" style="width: 72%;"></div>
+            <div class="progress-label">Python</div>
+            <div class="progress-bar" style="width: 78%;"></div>
+            <div class="progress-label">AWS</div>
+            <div class="progress-bar" style="width: 76%;"></div>
+        </div>
+      </div>
+
+        <div class="skills-section">
+          <h3>Soft Skills</h3>
+          <div class="progress-container">
+            <div class="progress-label">Problem Solving & Critical Thinking</div>
+            <div class="progress-bar" style="width: 80%;"></div>
+            <div class="progress-label">Effective Communication:</div>
+            <div class="progress-bar" style="width: 88%;"></div>
+            <div class="progress-label">Team Collaboration & Leadership</div>
+            <div class="progress-bar" style="width: 85%;"></div>
+            <div class="progress-label">Time Management & Project Management</div>
+            <div class="progress-bar" style="width: 84%;"></div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <div class="form-container">
+        <form action="/submit_form" method="post">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="message">Your message</label>
+            <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; Atharv Patole, 2024</p>
+  </footer>
+</body>
+</html>
