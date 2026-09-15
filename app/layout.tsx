@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { IBM_Plex_Mono, Inter, Space_Grotesk } from 'next/font/google';
 import { MotionConfig } from 'framer-motion';
+import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { CommandPalette } from '@/components/command-palette/CommandPalette';
 import './globals.css';
 
@@ -54,6 +56,8 @@ export default function RootLayout({
         */}
         <MotionConfig reducedMotion="user">{children}</MotionConfig>
         <CommandPalette />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
