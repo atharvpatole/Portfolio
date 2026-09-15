@@ -16,14 +16,7 @@ function scrollTo(id: string) {
 export function Nav() {
   return (
     <nav className="sticky top-0 z-30 border-b border-contour/25 bg-mylar/85 px-6 backdrop-blur md:px-10">
-      <div className="flex h-14 items-center justify-between">
-        <button
-          type="button"
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="font-mono text-meta text-depth"
-        >
-          {'<ap />'}
-        </button>
+      <div className="flex h-14 items-center justify-end">
         <ul className="hidden items-center gap-6 md:flex">
           {LINKS.map((link) => (
             <li key={link.id}>

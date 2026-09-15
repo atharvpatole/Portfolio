@@ -49,7 +49,11 @@ export function Footer() {
       className="border-t-2 border-contour px-6 py-section text-center md:px-10 md:py-section-lg"
     >
       <motion.div variants={fadeUp} className="flex flex-wrap items-center justify-center gap-3">
-        <IconLink href={`mailto:${email}`} label="Email">
+        <IconLink
+          href={`https://mail.google.com/mail/?view=cm&fs=1&to=${email}`}
+          label="Email"
+          external
+        >
           <EmailIcon className="h-5 w-5" />
         </IconLink>
         {links.map((link) => {
