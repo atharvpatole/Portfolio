@@ -1,0 +1,153 @@
+@import 'tailwindcss';
+
+/*
+  Design tokens. Off-white page, near-black text, one blue accent. Names kept
+  from earlier palettes so component classes did not need to change, only the
+  values did. `depth` is the one accent; `contour` is secondary text and
+  hairlines.
+*/
+@theme {
+  --color-mylar: #fafaf8;
+  --color-ink: #171717;
+  --color-contour: #5c5c56;
+  --color-shoal: #e4e4e0;
+  --color-depth: #8c1c3f;
+  --color-flagging: #8c1c3f;
+
+  /* Type: Space Grotesk for the name and titles, Inter for reading, mono for data and chrome. */
+  --font-serif: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-space-grotesk), var(--font-inter), ui-sans-serif, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Hero sizes: bigger again, now that it is one bold name rather than a paragraph. */
+  --text-hero-sm: 3rem;
+  --text-hero-sm--line-height: 1;
+  --text-hero-md: 4.5rem;
+  --text-hero-md--line-height: 0.98;
+  --text-hero-lg: 5.75rem;
+  --text-hero-lg--line-height: 0.96;
+
+  --text-h2: 2.75rem;
+  --text-h2--line-height: 1.08;
+  --text-h3: 1.5rem;
+  --text-h3--line-height: 1.2;
+  --text-lead: 1.3125rem;
+  --text-lead--line-height: 1.45;
+  --text-body: 1.0625rem;
+  --text-body--line-height: 1.55;
+  --text-meta: 0.875rem;
+  --text-meta--line-height: 1.4;
+  --text-data: 0.8125rem;
+  --text-data--line-height: 1.3;
+
+  /* Section rhythm. Everything else uses the default 4px-based scale. */
+  --spacing-section: 3.5rem;
+  --spacing-section-lg: 5rem;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-mylar);
+    color: var(--color-ink);
+    font-family: var(--font-serif);
+    font-size: var(--text-body);
+    line-height: var(--text-body--line-height);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /*
+    Radius policy: zero everywhere. Plan sheets have no rounded corners, and
+    this also makes the repeated-rounded-card failure mode impossible.
+    Circles are allowed where the thing is genuinely a disc.
+  */
+  :where(a, button, input, textarea, select, div, section, img) {
+    border-radius: 0;
+  }
+
+  /* Focus is flagging tape. Never remove it. */
+  :focus-visible {
+    outline: 2px solid var(--color-flagging);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background-color: var(--color-depth);
+    color: var(--color-mylar);
+  }
+}
+
+/*
+  Expand and collapse with no height measurement in JS and no animation library.
+  This motion answers a click, which is why the section has it and why nothing
+  here animates on scroll.
+*/
+.panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 260ms ease;
+}
+
+.panel[data-open='true'] {
+  grid-template-rows: 1fr;
+}
+
+/*
+  Set for the first commit only, so the featured panel can arrive already open
+  on wide viewports without animating itself open on page load.
+*/
+.panel[data-instant='true'] {
+  transition: none;
+}
+
+.panel > * {
+  min-height: 0;
+  overflow: hidden;
+}
+
+/*
+  The experience spine. One path, drawn once with a normalized `pathLength` of
+  1, so the dash maths needs no getTotalLength call. The drawn state is a data
+  attribute on the wrapper, which keeps the reduced-motion case purely in CSS
+  and therefore correct before hydration.
+*/
+.spine-path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset 1400ms ease-out;
+}
+
+.spine[data-drawn='true'] .spine-path {
+  stroke-dashoffset: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spine-path {
+    stroke-dasharray: none;
+    stroke-dashoffset: 0;
+    transition: none;
+  }
+}
+
+/* Reduced motion is honored globally, then again per component. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* A faint grid, the way a terminal or an IDE gutter reads before anything is typed into it. */
+.grid-pattern {
+  background-image:
+    linear-gradient(to right, color-mix(in srgb, var(--color-ink) 6%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--color-ink) 6%, transparent) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
