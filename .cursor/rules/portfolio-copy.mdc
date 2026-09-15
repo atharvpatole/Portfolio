@@ -1,0 +1,38 @@
+---
+description: Voice and copywriting rules for all portfolio text, including headings, alt text, and metadata.
+alwaysApply: true
+---
+
+# Writing rules
+
+- First person, plain voice. Short sentences.
+- No em dashes or en dashes anywhere in copy. Use commas, periods, or colons.
+- Say what the thing does before saying what it is built with.
+- Never write a number that is not in `portfolio-facts`. No invented percentages, user
+  counts, latencies, or team sizes.
+
+## Banned filler
+
+Never use: leveraging, passionate about, cutting-edge, seamless, journey, crafting
+experiences. Same goes for their close cousins (empowering, robust suite, game-changing).
+
+## Examples
+
+```
+// BAD
+Passionate about leveraging cutting-edge GenAI to craft seamless geospatial experiences,
+delivering a 40% improvement in pipeline throughput.
+
+// GOOD
+I owned the data pipeline behind a live consumer site. Python and DuckDB, served from
+Cloudflare R2.
+```
+
+```
+// BAD (em dash, stack before substance)
+A Next.js and DuckDB pipeline — rescuing federal infrastructure data.
+
+// GOOD
+Republished 400+ DHS infrastructure and resilience layers so they stay public. Built with
+GDAL, GeoParquet, and PMTiles.
+```

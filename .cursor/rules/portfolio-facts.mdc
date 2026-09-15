@@ -1,0 +1,101 @@
+---
+description: Atharv Patole's verified biography, roles, and stack. The only allowed source for facts in portfolio copy.
+alwaysApply: true
+---
+
+# Hard facts
+
+These are the only facts available. Never invent a number, date, metric, client name, or
+job title that is not on this page. If a fact is missing, leave it out or ask.
+
+## Audience
+
+Atharv Patole. AI / GenAI engineer with a geospatial and civil-engineering background.
+Based in New York City, NY. Targeting AI Engineer, Applied AI Engineer, Forward-Deployed
+Engineer, and AI/automation GTM roles.
+
+Write for a hiring manager or recruiter with 45 seconds. Every section must survive the
+question "so what did he actually ship?"
+
+## Contact
+
+- Email: atharvpatole6@gmail.com
+- LinkedIn: https://www.linkedin.com/in/atharvpatole/
+- GitHub: https://github.com/atharvpatole
+- Live product: https://spidernet.app
+
+## Experience
+
+**Fulton Ring, New York NY. Data Scientist, AI Systems. Aug 2025 - Jul 2026.**
+Built and shipped GenAI and geospatial data systems, centered on SpiderNet. Per the 2026
+resume (`d:\resume\aug26\Atharv_Patole_Resume_2026.pdf`): shipped SpiderNet as a production
+LLM search layer over city property, zoning, and flood data, cutting manual review time
+roughly 40% versus routing every request through an engineer. Rebuilt SpiderNet's RAG layer
+over Pinecone around structured metadata (property IDs, zoning codes, spatial indicators)
+after embedding-only retrieval kept surfacing plausible but wrong parcels, lifting retrieval
+consistency close to 30%. Instrumented MCP tool-calling with LangSmith tracing and
+LLM-as-judge guardrails, gating releases on regression evals and compressing hours of manual
+groundedness review to minutes. Automated cross-source validation and anomaly detection
+across millions of open-data records via Python and SQL on AWS, with match rules agreed
+alongside the data owners. Contributed to the HIFLD Next infrastructure data-rescue pipeline
+(public, credited to Fulton Ring with Public Environmental Data Partners and the Data Rescue
+Project; 400+ DHS infrastructure and resilience layers republished as GeoParquet and
+PMTiles). Built a standalone Next.js and MapLibre site for an Appalachian
+affordable-housing investment fund, reading spatial files above 10GB and trimming query
+latency roughly 60%. He also worked on a separate product, nyc.eats (data plus LLM work),
+at Fulton Ring.
+
+Display copy decision: the Experience section bullets for Fulton Ring do not name
+SpiderNet, the Appalachian fund, HIFLD Next, or nyc.eats. Atharv asked for this explicitly,
+to read as breadth across several production LLM and data systems rather than one named
+project. SpiderNet is still named in the Projects section, since that section is
+specifically its case study. Do not reintroduce product or client names into the Experience
+bullets without being asked.
+
+**Community Dream Foundation. Data Analyst. Aug 2025 - Jul 2026.**
+Built Python and SQL validation checks over data pipelines, identifying inconsistencies in
+reporting outputs before release. Extracted and verified data from internal tools and REST
+APIs, confirming completeness and accuracy across the reporting layer. Documented test
+scenarios and tracked data issues to resolution with developers and stakeholders. Also
+built dashboards so non-technical stakeholders could see reporting data directly. No
+further outcome metrics exist for this role. Do not invent any; source only from what
+Atharv states directly, since the 2026 resume
+(`d:\resume\aug26\Atharv_Patole_Resume_2026.pdf`) does not cover this role at all.
+
+**Scon Infra, Mumbai. Analytics Engineer. Jul 2020 - Jun 2023.**
+Per the 2026 resume: scripted reporting logic across $12M+ in infrastructure planning
+workflows, cutting recurring manual effort about 35%, after finance and engineering leads
+had been reconciling those figures by hand every month. Wrote Python and SQL ingestion
+pipelines for real estate and construction datasets, with validation rules agreed alongside
+the engineering team, retiring a manual prep step entirely after downstream models kept
+breaking on inconsistent source data. Defined governance rules and relational models
+spanning engineering and finance, shortening decision turnaround nearly 45%, replacing
+hand-assembled reports executives had waited on before committing to a plan.
+
+## Education
+
+- M.S. Computer Science, Pace University, New York NY. May 2025.
+- B.Tech Civil Engineering, Sanjay Ghodawat University, India. May 2021.
+
+## Awards
+
+- **1st place, Global Governance & Climate Hackathon.** Satellite-data attribution tool for
+  cross-border Amazon fires.
+- **1st place, FOAK Hackathon.** Built with a teammate, for Earthics, a startup converting
+  captured CO2 into synthetic graphite for batteries, steel, and defense. The challenge was
+  to design an investable capital stack and monetization model to move their first
+  commercial facility toward bankability. Ships on the site as a condensed one-line
+  description of that team-level deliverable, matching the style of the other award entry.
+  No personal-contribution claim beyond that is made; still do not invent or imply one.
+
+## Concurrent roles
+
+Fulton Ring and Community Dream Foundation both ran Aug 2025 to Jul 2026. This is correct
+and intentional. Any timeline or resume layout must show them as parallel, never as a
+correction or a gap.
+
+## Core stack
+
+Python, SQL, TypeScript, Next.js, LangChain, RAG / Pinecone, MCP tool-calling, LangSmith,
+DuckDB, AWS, Cloudflare R2, Vercel, GDAL, GeoPandas, WhiteboxTools, MapLibre GL, PMTiles,
+tippecanoe, GeoParquet.
