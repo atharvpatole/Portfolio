@@ -107,15 +107,56 @@ export const projects: Project[] = [
     slug: 'art-styles',
     name: 'Art Styles',
     summary:
-      "A library of original art styles for greeting cards, generated end to end. Fourteen cards across seven art movements, two original styles built by combining movements that don't normally meet, and one style based on a current Gen Z trend. Each style is written as a reusable JSON spec before generation, so a whole set stays on-style instead of drifting image to image.",
+      "A library of original art styles for greeting cards, generated end to end. Twenty-two card fronts across seven art movements, two original styles built by combining movements that don't normally meet, and one style based on a current Gen Z trend. Each style is written as a reusable JSON spec before generation, so a whole set stays on-style instead of drifting image to image.",
     data: [
-      { readout: '14 cards' },
+      { readout: '22 card fronts' },
       { readout: '7 art movements' },
-      { readout: '2 original styles' },
+      { readout: '2 hybrid styles' },
       { readout: '1 Gen Z-trend style' },
     ],
     tech: ['Next.js', 'Vercel', 'Nano Banana 2'],
-    detail: [],
+    detailLabel: 'Read the styles',
+    /*
+      Three parts, same shape as SpiderNet: the method carries emphasis because
+      it is what keeps a 22-card set from drifting image to image, the two
+      hybrids and the trend style are what make it original rather than a
+      style-transfer demo, and the range list is the detail underneath.
+    */
+    detail: [
+      {
+        kind: 'part',
+        heading: 'The method',
+        emphasis: true,
+        paragraphs: [
+          'Each style is written as a reusable JSON spec before anything is generated: medium, palette, texture, composition, and what to avoid. A card is that spec plus an occasion, so a whole set stays on-style instead of drifting image to image, and a new occasion is a one-line change instead of a new prompt.',
+          'No artist names, studios, brands, or existing characters appear in any prompt. Styles are described entirely by their visual traits, so the output stays commercially usable.',
+        ],
+      },
+      {
+        kind: 'part',
+        heading: 'Two styles that don’t normally meet',
+        paragraphs: [
+          'Ukiyo-e Chrome takes the carved outlines and woodblock composition built for cheap, fast street-corner printing and renders every surface in Y2K liquid chrome, the finish Gen Z keeps pulling back out of 2001.',
+          'Baroque Riso prints the single-spotlight drama and theatrical staging of Baroque painting as a grainy, misregistered two-color risograph zine, so a card can mean its subject and joke about it in the same breath.',
+        ],
+      },
+      {
+        kind: 'part',
+        heading: 'One Gen Z read',
+        paragraphs: [
+          'Jelly Candy is built on the squishy, translucent gummy look running through Pinterest and the ASMR side of TikTok. It reads happy without reading childish, which is a narrow lane for a style to hold.',
+        ],
+      },
+      {
+        kind: 'list',
+        heading: 'The range',
+        items: [
+          '14 cards across watercolor, risograph, claymation, ukiyo-e, Bauhaus, 90s anime cel, and Art Nouveau, two cards per movement.',
+          'Ukiyo-e Chrome and Baroque Riso carry 2 and 3 cards; Jelly Candy carries 3.',
+          'Every prompt is published on the site next to the image it produced.',
+        ],
+      },
+    ],
     links: [
       { label: 'Live', href: 'https://art-styles-gamma.vercel.app' },
       { label: 'Repo', href: 'https://github.com/atharvpatole/synth-art-cards' },
