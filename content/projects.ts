@@ -103,4 +103,22 @@ export const projects: Project[] = [
       { label: 'Flood model write-up', href: '', pending: true },
     ],
   },
+  {
+    slug: 'art-styles',
+    name: 'Art Styles',
+    summary:
+      "A library of original art styles for greeting cards, generated end to end. Fourteen cards across seven art movements, two original styles built by combining movements that don't normally meet, and one style based on a current Gen Z trend. Each style is written as a reusable JSON spec before generation, so a whole set stays on-style instead of drifting image to image.",
+    data: [
+      { readout: '14 cards' },
+      { readout: '7 art movements' },
+      { readout: '2 original styles' },
+      { readout: '1 Gen Z-trend style' },
+    ],
+    tech: ['Next.js', 'Vercel', 'Nano Banana 2'],
+    detail: [],
+    links: [
+      { label: 'Live', href: 'https://art-styles-gamma.vercel.app' },
+      { label: 'Repo', href: 'https://github.com/atharvpatole/synth-art-cards' },
+    ],
+  },
 ];
